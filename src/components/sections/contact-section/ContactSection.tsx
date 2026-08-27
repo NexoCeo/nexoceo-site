@@ -1,17 +1,17 @@
-import Icon from '../common/Icon'
+import styles from './styles.module.css'
+import Icon from '@/components/common/Icon'
 
 function ContactSection() {
   const openEmail = () => {
-    window.location.href =
-      'mailto:contato@nexoceo.com.br'
+    window.location.href = 'mailto:contato@nexoceo.com.br'
   }
 
   return (
     <section
-      className="cta-bar"
+      className={styles.ctaBar}
       id="contato"
     >
-      <div className="container cta-bar__grid">
+      <div className={`${styles.container} ${styles.ctaBarGrid}`}>
         <h2>
           Pronto para transformar
           <br />
@@ -26,7 +26,7 @@ function ContactSection() {
 
         <button
           type="button"
-          className="cta-bar__button"
+          className={styles.ctaBarButton}
           onClick={openEmail}
         >
           Fale com um especialista

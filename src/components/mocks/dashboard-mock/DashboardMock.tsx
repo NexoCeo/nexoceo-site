@@ -1,5 +1,7 @@
-import BrandMark from '../common/BrandMark'
-import Metric from './Metric'
+import styles from './styles.module.css'
+
+import BrandMark from '../../common/brand-mark/BrandMark'
+import Metric from '../Metric'
 
 interface DashboardMockProps {
   compact?: boolean
@@ -43,47 +45,39 @@ function DashboardMock({
 }: DashboardMockProps) {
   return (
     <div
-      className={`dashboard ${
-        compact
-          ? 'dashboard--compact'
-          : ''
+      className={`${styles.dashboard} ${
+        compact ? styles.dashboardCompact : ''
       }`}
     >
-      <aside className="dashboard__sidebar">
+      <aside className={styles.dashboardSidebar}>
         <BrandMark compact />
 
-        <div className="side-nav">
-          {navigationItems.map(
-            (item, index) => (
-              <div
-                key={item}
-                className={`side-nav__item ${
-                  index === 0
-                    ? 'active'
-                    : ''
-                }`}
-              >
-                <span className="side-nav__dot" />
+        <div className={styles.sideNav}>
+          {navigationItems.map((item, index) => (
+            <div
+              key={item}
+              className={`${styles.sideNavItem} ${
+                index === 0 ? styles.active : ''
+              }`}
+            >
+              <span className={styles.sideNavDot} />
 
-                {item}
-              </div>
-            ),
-          )}
+              {item}
+            </div>
+          ))}
         </div>
       </aside>
 
-      <div className="dashboard__content">
-        <div className="dashboard__top">
-          <span>
-            Resumo geral
-          </span>
+      <div className={styles.dashboardContent}>
+        <div className={styles.dashboardTop}>
+          <span>Resumo geral</span>
 
           <span>
             Olá, Produtor <b>●</b>
           </span>
         </div>
 
-        <div className="dashboard__metrics">
+        <div className={styles.dashboardMetrics}>
           <Metric
             label="Atendimentos"
             value="128"
@@ -103,8 +97,8 @@ function DashboardMock({
           />
         </div>
 
-        <div className="chart-card">
-          <div className="chart-card__head">
+        <div className={styles.chartCard}>
+          <div className={styles.chartCardHead}>
             <span>
               Evolução de atendimentos
             </span>
@@ -114,7 +108,7 @@ function DashboardMock({
             </b>
           </div>
 
-          <div className="chart-grid">
+          <div className={styles.chartGrid}>
             <svg
               viewBox="0 0 440 170"
               preserveAspectRatio="none"
@@ -141,31 +135,23 @@ function DashboardMock({
                 points={chartData
                   .map(
                     (value, index) =>
-                      `${index * 40},${
-                        165 -
-                        value * 2.1
-                      }`,
+                      `${index * 40},${165 - value * 2.1}`,
                   )
                   .join(' ')}
               />
 
-              {chartData.map(
-                (value, index) => (
-                  <circle
-                    key={`${index}-${value}`}
-                    cx={index * 40}
-                    cy={
-                      165 -
-                      value * 2.1
-                    }
-                    r="3.5"
-                    fill="#2d72ff"
-                  />
-                ),
-              )}
+              {chartData.map((value, index) => (
+                <circle
+                  key={`${index}-${value}`}
+                  cx={index * 40}
+                  cy={165 - value * 2.1}
+                  r="3.5"
+                  fill="#2d72ff"
+                />
+              ))}
             </svg>
 
-            <div className="chart-labels">
+            <div className={styles.chartLabels}>
               <span>Jan</span>
               <span>Fev</span>
               <span>Mar</span>

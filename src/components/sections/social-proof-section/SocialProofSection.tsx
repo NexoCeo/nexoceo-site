@@ -1,6 +1,7 @@
 import { useState } from 'react'
+import styles from './styles.module.css'
 
-import { testimonials } from '../data/testimonials'
+import { testimonials } from '@/components/data/testimonials'
 
 function SocialProofSection() {
   const [
@@ -18,25 +19,25 @@ function SocialProofSection() {
     .join('')
 
   return (
-    <section className="social-proof">
-      <div className="container social-proof__grid">
-        <div className="clients">
+    <section className={styles.socialProof}>
+      <div className={`container ${styles.socialProofGrid}`}>
+        <div className={styles.clients}>
           <span className="eyebrow">
             QUEM CONFIA NA NEXOCEO
           </span>
 
-          <div className="client-logos">
+          <div className={styles.clientLogos}>
             <strong>
               ◉ STUDIO
               <br />
               FUSION
             </strong>
 
-            <strong className="serif">
+            <strong className={styles.serif}>
               BellaForma
             </strong>
 
-            <strong className="script">
+            <strong className={styles.script}>
               Barbearia
 
               <small>
@@ -53,34 +54,27 @@ function SocialProofSection() {
             </strong>
           </div>
 
-          <div className="dots">
-            {testimonials.map(
-              (item, index) => (
-                <button
-                  type="button"
-                  key={item.name}
-                  aria-label={`Depoimento ${
-                    index + 1
-                  }`}
-                  onClick={() =>
-                    setActiveTestimonial(
-                      index,
-                    )
-                  }
-                  className={
-                    activeTestimonial ===
-                    index
-                      ? 'active'
-                      : ''
-                  }
-                />
-              ),
-            )}
+          <div className={styles.dots}>
+            {testimonials.map((item, index) => (
+              <button
+                type="button"
+                key={item.name}
+                aria-label={`Depoimento ${index + 1}`}
+                onClick={() =>
+                  setActiveTestimonial(index)
+                }
+                className={
+                  activeTestimonial === index
+                    ? styles.active
+                    : ''
+                }
+              />
+            ))}
           </div>
         </div>
 
-        <div className="testimonial">
-          <span className="quote">
+        <div className={styles.testimonial}>
+          <span className={styles.quote}>
             “
           </span>
 
@@ -88,7 +82,7 @@ function SocialProofSection() {
             {testimonial.text}
           </p>
 
-          <div className="testimonial__person">
+          <div className={styles.testimonialPerson}>
             <div>
               <b>
                 {testimonial.name}
@@ -99,7 +93,7 @@ function SocialProofSection() {
               </small>
             </div>
 
-            <div className="avatar">
+            <div className={styles.avatar}>
               {initials}
             </div>
           </div>

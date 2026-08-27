@@ -1,14 +1,18 @@
-import Icon from '../common/Icon'
-import { products } from '../data/products'
+import styles from './styles.module.css'
+
+import Icon from '@/components/common/Icon'
+import { products } from '@/components/data/products'
 
 function ProductsSection() {
   return (
     <section
-      className="section products"
+      className={`section ${styles.products}`}
       id="produtos"
     >
       <div className="container">
-        <div className="section-heading section-heading--split">
+        <div
+          className={`section-heading section-heading--split ${styles.sectionHeading}`}
+        >
           <div>
             <span className="eyebrow">
               SOLUÇÕES COMPLETAS
@@ -28,14 +32,16 @@ function ProductsSection() {
           </p>
         </div>
 
-        <div className="product-grid">
+        <div className={styles.productGrid}>
           {products.map((product) => (
             <article
-              className="product-card"
+              className={styles.productCard}
               key={product.title}
             >
               <span
-                className={`product-icon ${product.tone}`}
+                className={`${styles.productIcon} ${
+                  styles[product.tone]
+                }`}
               >
                 <Icon
                   name={product.icon}
@@ -62,8 +68,9 @@ function ProductsSection() {
                 ))}
               </ul>
 
-              <button>
+              <button type="button">
                 Saiba mais
+
                 <Icon
                   name="arrow"
                   size={16}

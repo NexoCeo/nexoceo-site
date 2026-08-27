@@ -1,0 +1,80 @@
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brandSymbol {
+  width: 52px;
+  height: 52px;
+
+  flex: none;
+
+  object-fit: contain;
+}
+
+.brandCopy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  text-align: left;
+
+  line-height: 1;
+
+  width: max-content;
+}
+
+.brandCopy strong {
+  display: block;
+
+  font-size: 28px;
+  letter-spacing: -1.2px;
+  font-weight: 700;
+
+  line-height: 1;
+
+  color: #fff;
+
+  text-align: left;
+}
+
+.brandCopy small {
+  display: block;
+
+  margin-top: 5px;
+
+  color: #1ed7c1;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  line-height: 1.2;
+
+  text-align: left;
+}
+
+.brandCompact {
+  gap: 5px;
+}
+
+.brandCompact .brandSymbol {
+  width: 27px;
+  height: 27px;
+}
+
+.brandCompact .brandCopy strong {
+  font-size: 12px;
+  letter-spacing: -.4px;
+}
+
+@media (max-width: 560px) {
+  .brandSymbol {
+    width: 43px;
+    height: 43px;
+  }
+
+  .brandCopy strong {
+    font-size: 23px;
+  }
+}

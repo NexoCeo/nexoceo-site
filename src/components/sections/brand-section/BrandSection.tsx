@@ -1,15 +1,16 @@
-import BrandMark from '../common/BrandMark'
+import styles from './styles.module.css'
+import BrandMark from '@/components/common/brand-mark/BrandMark'
 
 function BrandSection() {
   return (
     <section
-      className="brand-panel-wrap"
+      className={styles.brandPanelWrap}
       id="quem-somos"
     >
-      <div className="container">
-        <div className="brand-panel">
-          <div className="brand-panel__text">
-            <span className="eyebrow">
+      <div className={styles.container}>
+        <div className={styles.brandPanel}>
+          <div className={styles.brandPanelText}>
+            <span className={styles.eyebrow}>
               SÍMBOLO E CONCEITO
             </span>
 
@@ -22,14 +23,13 @@ function BrandSection() {
               crescimento do seu negócio.
             </p>
 
-            <span className="eyebrow">
+            <span className={styles.eyebrow}>
               O SÍMBOLO
             </span>
 
             <p>
               <b>
-                Conexão · Automação ·
-                Crescimento
+                Conexão · Automação · Crescimento
               </b>
 
               <br />
@@ -39,30 +39,36 @@ function BrandSection() {
             </p>
           </div>
 
-          <div className="brand-panel__mark">
+          <div className={styles.brandPanelMark}>
             <BrandMark compact />
           </div>
 
-          <div className="brand-panel__apps">
-            <span className="eyebrow">
+          <div className={styles.brandPanelApps}>
+            <span className={styles.eyebrow}>
               APLICAÇÕES DO ÍCONE
             </span>
 
-            <div className="app-icons">
-              <div className="app-icon app-icon--dark">
+            <div className={styles.appIcons}>
+              <div
+                className={`${styles.appIcon} ${styles.appIconDark}`}
+              >
                 <BrandMark compact />
               </div>
 
-              <div className="app-icon app-icon--light">
+              <div
+                className={`${styles.appIcon} ${styles.appIconLight}`}
+              >
                 <BrandMark compact />
               </div>
 
-              <div className="app-icon app-icon--blue">
+              <div
+                className={`${styles.appIcon} ${styles.appIconBlue}`}
+              >
                 <BrandMark compact />
               </div>
             </div>
 
-            <div className="brand-signature">
+            <div className={styles.brandSignature}>
               <BrandMark />
             </div>
           </div>

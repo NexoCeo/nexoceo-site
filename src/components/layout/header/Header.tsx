@@ -1,9 +1,10 @@
 import { useState } from 'react'
 
-import BrandMark from '../common/BrandMark'
+import styles from './styles.module.css'
 
-import { navigation } from '../data/navigation'
-import { scrollToSection } from '../../utils/scrollToSection'
+import BrandMark from '@/components/common/brand-mark/BrandMark'
+import { navigation } from '@/components/data/navigation'
+import { scrollToSection } from '@/utils/scrollToSection'
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -14,9 +15,10 @@ function Header() {
   }
 
   return (
-    <header className="site-header container">
+    <header className={`container ${styles.siteHeader}`}>
       <button
-        className="brand-button"
+        type="button"
+        className={styles.brandButton}
         onClick={() => navigateTo('inicio')}
         aria-label="Ir para o início"
       >
@@ -24,21 +26,20 @@ function Header() {
       </button>
 
       <nav
-        className={`nav ${
-          menuOpen ? 'nav--open' : ''
+        className={`${styles.nav} ${
+          menuOpen ? styles.navOpen : ''
         }`}
       >
         {navigation.map((item) => (
           <button
+            type="button"
             key={item.id}
             className={
               item.id === 'inicio'
-                ? 'active'
+                ? styles.active
                 : ''
             }
-            onClick={() =>
-              navigateTo(item.id)
-            }
+            onClick={() => navigateTo(item.id)}
           >
             {item.label}
           </button>
@@ -46,16 +47,16 @@ function Header() {
       </nav>
 
       <button
-        className="header-cta"
-        onClick={() =>
-          navigateTo('contato')
-        }
+        type="button"
+        className={styles.headerCta}
+        onClick={() => navigateTo('contato')}
       >
         Fale com um especialista
       </button>
 
       <button
-        className="mobile-menu"
+        type="button"
+        className={styles.mobileMenu}
         aria-label={
           menuOpen
             ? 'Fechar menu'
@@ -63,9 +64,7 @@ function Header() {
         }
         aria-expanded={menuOpen}
         onClick={() =>
-          setMenuOpen(
-            (current) => !current,
-          )
+          setMenuOpen((current) => !current)
         }
       >
         <span />

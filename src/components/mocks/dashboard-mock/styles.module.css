@@ -1,0 +1,205 @@
+.dashboard {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  background: #f7f9fc;
+  border-radius: 6px;
+  display: grid;
+  grid-template-columns: 145px 1fr;
+  color: #0b1722;
+}
+
+.dashboardSidebar {
+  background: #071a27;
+  color: #dbe8ed;
+  padding: 15px 13px;
+}
+
+.dashboardSidebar .brandCopy strong {
+  color: #f5f8fa;
+}
+
+.sideNav {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sideNavItem {
+  font-size: 8px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px;
+  border-radius: 4px;
+  color: #a9b6be;
+}
+
+.sideNavItem.active {
+  background: rgba(21, 217, 194, .11);
+  color: #17d9c1;
+}
+
+.sideNavDot {
+  width: 8px;
+  height: 8px;
+  border: 1px solid currentColor;
+  border-radius: 2px;
+}
+
+.dashboardContent {
+  padding: 18px 20px 20px;
+  overflow: hidden;
+}
+
+.dashboardTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 9px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.dashboardTop span:last-child {
+  font-size: 7px;
+  font-weight: 500;
+  color: #45525c;
+}
+
+.dashboardTop b {
+  color: #fb9f78;
+}
+
+.dashboardMetrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.metric {
+  background: #fff;
+  border: 1px solid #edf1f4;
+  border-radius: 5px;
+  padding: 12px;
+
+  box-shadow:
+    0 8px 20px rgba(20, 44, 61, .05);
+}
+
+.metric > span {
+  font-size: 7px;
+  color: #71808c;
+}
+
+.metric div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 8px;
+}
+
+.metric strong {
+  font-size: 18px;
+}
+
+.metric em {
+  color: #13bd8c;
+  font-size: 7px;
+  font-style: normal;
+  font-weight: 800;
+}
+
+.chartCard {
+  margin-top: 14px;
+  background: #fff;
+  border: 1px solid #edf1f4;
+  border-radius: 6px;
+  padding: 13px;
+}
+
+.chartCard__head {
+  display: flex;
+  justify-content: space-between;
+  font-size: 8px;
+  font-weight: 700;
+}
+
+.chartCardHead b {
+  font-size: 6px;
+  color: #9aa4ac;
+  font-weight: 500;
+}
+
+.chartGrid {
+  margin-top: 9px;
+}
+
+.chartGrid svg {
+  width: 100%;
+  height: 125px;
+  overflow: visible;
+}
+
+.chartLabels {
+  display: flex;
+  justify-content: space-around;
+  color: #96a1aa;
+  font-size: 6px;
+  margin-top: -3px;
+}
+
+/* Variação compacta usada no WhyNexoSection */
+
+.dashboardCompact {
+  height: 295px;
+
+  box-shadow:
+    0 16px 34px rgba(10, 38, 55, .14);
+
+  border: 1px solid #e3e9ee;
+}
+
+.dashboardCompact .dashboardSidebar {
+  width: auto;
+}
+
+.dashboardCompact .chartGrid svg {
+  height: 100px;
+}
+
+@media (max-width: 560px) {
+  .dashboard {
+    grid-template-columns: 100px 1fr;
+  }
+
+  .dashboardSidebar {
+    padding: 10px 8px;
+  }
+
+  .sideNavItem {
+    padding: 5px;
+    font-size: 6px;
+  }
+
+  .dashboardContent {
+    padding: 11px;
+  }
+
+  .metric {
+    padding: 7px;
+  }
+
+  .metric strong {
+    font-size: 12px;
+  }
+
+  .chartGrid svg {
+    height: 70px;
+  }
+
+  .dashboardCompact {
+    height: 255px;
+  }
+}

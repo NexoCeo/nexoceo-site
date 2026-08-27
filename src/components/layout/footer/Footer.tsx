@@ -1,11 +1,13 @@
-import BrandMark from '../common/BrandMark'
-import Icon from '../common/Icon'
+import BrandMark from '@/components/common/brand-mark/BrandMark'
+import Icon from '@/components/common/Icon'
+
+import styles from './styles.module.css'
 
 function Footer() {
   return (
-    <footer className="footer">
-      <div className="container footer__grid">
-        <div className="footer__brand">
+    <footer className={styles.footer}>
+      <div className={`container ${styles.footerGrid}`}>
+        <div className={styles.footerBrand}>
           <BrandMark />
 
           <p>
@@ -14,7 +16,7 @@ function Footer() {
             criar o futuro.
           </p>
 
-          <div className="socials">
+          <div className={styles.socials}>
             <button
               type="button"
               aria-label="Instagram"
@@ -50,7 +52,7 @@ function Footer() {
             NAVEGAÇÃO
           </span>
 
-          <ul className="footer-list">
+          <ul className={styles.footerList}>
             <li>Início</li>
             <li>Produtos</li>
             <li>Metodologia</li>
@@ -65,7 +67,7 @@ function Footer() {
             PRODUTOS
           </span>
 
-          <ul className="footer-list">
+          <ul className={styles.footerList}>
             <li>NexoAgenda</li>
             <li>NexoGestão</li>
             <li>NexoAnalytics</li>
@@ -77,7 +79,7 @@ function Footer() {
             CONTATO
           </span>
 
-          <ul className="footer-contact">
+          <ul className={styles.footerContact}>
             <li>
               <Icon
                 name="phone"
@@ -107,14 +109,14 @@ function Footer() {
               />
 
               <span>
-                São Paulo - SP, Brasil
+                São Gabriel da Palha - ES, Brasil
               </span>
             </li>
           </ul>
         </div>
       </div>
 
-      <div className="container footer__bottom">
+      <div className={`container ${styles.footerBottom}`}>
         <span>
           © 2026 NexoCEO. Todos os direitos
           reservados.

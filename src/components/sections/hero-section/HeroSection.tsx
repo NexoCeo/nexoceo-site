@@ -1,32 +1,37 @@
-import Icon from '../common/Icon'
-import Header from '../layout/Header'
+import styles from './styles.module.css'
 
-import DashboardMock from '../mocks/DashboardMock'
-import PhoneMock from '../mocks/PhoneMock'
+import Icon from '@/components/common/Icon'
+import Header from '@/components/layout/header/Header'
 
-import { scrollToSection } from '../../utils/scrollToSection'
+import DashboardMock from '@/components/mocks/dashboard-mock/DashboardMock'
+import PhoneMock from '@/components/mocks/phone-mock/PhoneMock'
+
+import { scrollToSection } from '@/utils/scrollToSection'
 
 function HeroSection() {
   return (
     <section
-      className="hero"
+      className={styles.hero}
       id="inicio"
     >
-      <div className="hero__glow hero__glow--one" />
-      <div className="hero__glow hero__glow--two" />
+      <div
+        className={`${styles.heroGlow} ${styles.heroGlowOne}`}
+      />
+
+      <div
+        className={`${styles.heroGlow} ${styles.heroGlowTwo}`}
+      />
 
       <Header />
 
-      <div className="container hero__grid">
-        <div className="hero__copy">
+      <div className={`${styles.container} ${styles.heroGrid}`}>
+        <div className={styles.heroCopy}>
           <h1>
             Tecnologia que
             <br />
             conecta, automatiza e
             <br />
-            <span>
-              impulsiona
-            </span>{' '}
+            <span>impulsiona</span>{' '}
             seu negócio.
           </h1>
 
@@ -40,14 +45,12 @@ function HeroSection() {
             e previsibilidade.
           </p>
 
-          <div className="hero__actions">
+          <div className={styles.heroActions}>
             <button
               type="button"
-              className="btn btn--primary"
+              className={`${styles.btn} ${styles.btnPrimary}`}
               onClick={() =>
-                scrollToSection(
-                  'produtos',
-                )
+                scrollToSection('produtos')
               }
             >
               Conheça nossos produtos
@@ -55,11 +58,9 @@ function HeroSection() {
 
             <button
               type="button"
-              className="btn btn--ghost"
+              className={`${styles.btn} ${styles.btnGhost}`}
               onClick={() =>
-                scrollToSection(
-                  'contato',
-                )
+                scrollToSection('contato')
               }
             >
               Agendar demonstração
@@ -71,15 +72,13 @@ function HeroSection() {
             </button>
           </div>
 
-          <div className="hero__roles">
+          <div className={styles.heroRoles}>
             <div>
-              <span className="role-icon">
+              <span className={styles.roleIcon}>
                 <Icon name="users" />
               </span>
 
-              <b>
-                Cliente
-              </b>
+              <b>Cliente</b>
 
               <small>
                 Conexão que inicia
@@ -89,13 +88,11 @@ function HeroSection() {
             </div>
 
             <div>
-              <span className="role-icon">
+              <span className={styles.roleIcon}>
                 <Icon name="calendar" />
               </span>
 
-              <b>
-                NexoCEO
-              </b>
+              <b>NexoCEO</b>
 
               <small>
                 Automação que
@@ -105,13 +102,11 @@ function HeroSection() {
             </div>
 
             <div>
-              <span className="role-icon">
+              <span className={styles.roleIcon}>
                 <Icon name="chart" />
               </span>
 
-              <b>
-                Produtor
-              </b>
+              <b>Produtor</b>
 
               <small>
                 Seu negócio cresce
@@ -123,16 +118,16 @@ function HeroSection() {
         </div>
 
         <div
-          className="hero__visual"
+          className={styles.heroVisual}
           aria-label="Painel da plataforma NexoCEO"
         >
-          <div className="laptop-shell">
-            <div className="laptop-camera" />
+          <div className={styles.laptopShell}>
+            <div className={styles.laptopCamera} />
 
             <DashboardMock />
           </div>
 
-          <div className="laptop-base" />
+          <div className={styles.laptopBase} />
 
           <PhoneMock />
         </div>

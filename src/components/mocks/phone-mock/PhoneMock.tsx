@@ -1,4 +1,5 @@
-import BrandMark from '../common/BrandMark'
+import styles from './styles.module.css'
+import BrandMark from '@/components/common/brand-mark/BrandMark'
 
 const phoneStats = [
   {
@@ -20,15 +21,13 @@ const phoneStats = [
 
 function PhoneMock() {
   return (
-    <div className="phone-mock">
-      <div className="phone-mock__notch" />
+    <div className={styles.phoneMock}>
+      <div className={styles.phoneMockNotch} />
 
-      <div className="phone-mock__screen">
+      <div className={styles.phoneMockScreen}>
         <BrandMark compact />
 
-        <h4>
-          Bem-vindo!
-        </h4>
+        <h4>Bem-vindo!</h4>
 
         <p>
           Tudo conectado.
@@ -38,24 +37,20 @@ function PhoneMock() {
 
         {phoneStats.map((stat) => (
           <div
-            className="phone-stat"
+            className={styles.phoneStat}
             key={stat.label}
           >
             <span>
               {stat.label}
 
-              <b>
-                {stat.value}
-              </b>
+              <b>{stat.value}</b>
             </span>
 
-            <em>
-              {stat.change}
-            </em>
+            <em>{stat.change}</em>
           </div>
         ))}
 
-        <div className="mini-chart">
+        <div className={styles.miniChart}>
           <svg
             viewBox="0 0 140 60"
             aria-hidden="true"

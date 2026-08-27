@@ -1,5 +1,7 @@
-import { useTheme } from '@/context/ThemeContext';
-import imgLogin from '@/images/logo.png';
+import styles from './styles.module.css'
+
+import { useTheme } from '@/context/ThemeContext'
+import logo from '@/images/logo.png'
 
 interface BrandMarkProps {
   compact?: boolean
@@ -10,25 +12,24 @@ function BrandMark({
   compact = false,
   className = '',
 }: BrandMarkProps) {
-  const { theme } = useTheme();
+  const { theme } = useTheme()
 
   return (
     <div
-      className={`brand ${
-        compact ? 'brand--compact' : ''
+      className={`${styles.brand} ${
+        compact ? styles.brandCompact : ''
       } ${className}`.trim()}
     >
-      <img 
-        src={imgLogin}
+      <img
+        className={styles.brandSymbol}
+        src={logo}
+        alt="NexoCEO"
         style={{
-          width: '50px',
-          height: '50px',
-          color: theme.colors.error,
           borderColor: theme.colors.primary,
         }}
       />
 
-      <div className="brand__copy">
+      <div className={styles.brandCopy}>
         <strong>NexoCEO</strong>
 
         {!compact && (
