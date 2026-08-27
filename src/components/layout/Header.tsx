@@ -2,7 +2,7 @@ import { useState } from 'react'
 
 import BrandMark from '../common/BrandMark'
 
-import { navigation } from '../../data/navigation'
+import { navigation } from '../data/navigation'
 import { scrollToSection } from '../../utils/scrollToSection'
 
 function Header() {
