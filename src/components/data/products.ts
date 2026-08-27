@@ -22,7 +22,6 @@ export const products: Product[] = [
     ],
     tone: 'blue',
   },
-
   {
     icon: 'users',
     title: 'NexoGestão',
@@ -36,7 +35,6 @@ export const products: Product[] = [
     ],
     tone: 'green',
   },
-
   {
     icon: 'chart',
     title: 'NexoAnalytics',

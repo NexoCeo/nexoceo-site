@@ -1,5 +1,5 @@
 import Icon from '../common/Icon'
-import { products } from '../../data/products'
+import { products } from '../data/products'
 
 function ProductsSection() {
   return (

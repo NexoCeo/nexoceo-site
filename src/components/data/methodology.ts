@@ -1,4 +1,4 @@
-import type { IconName } from '../components/common/Icon'
+import type { IconName } from '../common/Icon'
 
 export interface MethodologyStep {
   number: string
