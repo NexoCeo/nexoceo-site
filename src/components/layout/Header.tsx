@@ -4,7 +4,7 @@ import BrandMark from '../common/BrandMark'
 
 import { navigation } from '../data/navigation'
 import { scrollToSection } from '../../utils/scrollToSection'
-import imgLogin from '@/imagens/logo.png';
+import imgLogin from '@/images/logo.png';
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
