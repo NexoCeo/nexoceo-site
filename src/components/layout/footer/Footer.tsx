@@ -25,6 +25,7 @@ function Footer() {
           <div className={styles.socials}>
             <button
               type="button"
+              className={`${styles.socialButton} ${styles.instagram}`}
               aria-label="Instagram"
             >
               <Icon name="instagram" />
@@ -32,6 +33,7 @@ function Footer() {
 
             <button
               type="button"
+              className={`${styles.socialButton} ${styles.linkedin}`}
               aria-label="LinkedIn"
             >
               <Icon name="linkedin" />
@@ -39,6 +41,7 @@ function Footer() {
 
             <button
               type="button"
+              className={`${styles.socialButton} ${styles.whatsapp}`}
               aria-label="WhatsApp"
             >
               <Icon name="whatsapp" />
@@ -46,6 +49,7 @@ function Footer() {
 
             <button
               type="button"
+              className={`${styles.socialButton} ${styles.email}`}
               aria-label="E-mail"
               onClick={() => {
                 window.location.href =
