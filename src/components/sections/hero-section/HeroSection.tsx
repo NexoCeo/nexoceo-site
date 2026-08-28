@@ -3,8 +3,7 @@ import styles from './styles.module.css'
 import Icon from '@/components/common/Icon'
 import Header from '@/components/layout/header/Header'
 
-import DashboardMock from '@/components/mocks/dashboard-mock/DashboardMock'
-import PhoneMock from '@/components/mocks/phone-mock/PhoneMock'
+import heroMockup from '@/images/hero-mockup.png'
 
 import { scrollToSection } from '@/utils/scrollToSection'
 
@@ -117,19 +116,12 @@ function HeroSection() {
           </div>
         </div>
 
-        <div
-          className={styles.heroVisual}
-          aria-label="Painel da plataforma NexoCEO"
-        >
-          <div className={styles.laptopShell}>
-            <div className={styles.laptopCamera} />
-
-            <DashboardMock />
-          </div>
-
-          <div className={styles.laptopBase} />
-
-          <PhoneMock />
+        <div className={styles.heroVisual}>
+          <img
+            src={heroMockup}
+            alt="Plataforma NexoCEO em computador e smartphone"
+            className={styles.heroMockup}
+          />
         </div>
       </div>
     </section>
