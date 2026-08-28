@@ -11,7 +11,7 @@ function ContactSection() {
       className={styles.ctaBar}
       id="contato"
     >
-      <div className={`${styles.container} ${styles.ctaBarGrid}`}>
+      <div className={`container ${styles.ctaBarGrid}`}>
         <h2>
           Pronto para transformar
           <br />

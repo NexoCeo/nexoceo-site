@@ -24,7 +24,7 @@ function HeroSection() {
 
       <Header />
 
-      <div className={styles.heroGrid}>
+      <div className={`container ${styles.heroGrid}`}>
         <div className={styles.heroCopy}>
           <h1>
             Tecnologia que
