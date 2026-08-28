@@ -1,9 +1,16 @@
+import styles from './styles.module.css'
+
 import BrandMark from '@/components/common/brand-mark/BrandMark'
 import Icon from '@/components/common/Icon'
 
-import styles from './styles.module.css'
+import { navigation } from '@/components/data/navigation'
+import { scrollToSection } from '@/utils/scrollToSection'
 
 function Footer() {
+  const navigateTo = (id: string) => {
+    scrollToSection(id)
+  }
+
   return (
     <footer className={styles.footer}>
       <div className={`container ${styles.footerGrid}`}>
@@ -11,9 +18,8 @@ function Footer() {
           <BrandMark />
 
           <p>
-            Conectamos tecnologia, estratégia e
-            pessoas para impulsionar negócios e
-            criar o futuro.
+            Conectamos tecnologia, estratégia e pessoas
+            para impulsionar negócios e criar o futuro.
           </p>
 
           <div className={styles.socials}>
@@ -41,6 +47,10 @@ function Footer() {
             <button
               type="button"
               aria-label="E-mail"
+              onClick={() => {
+                window.location.href =
+                  'mailto:contato@nexoceo.com.br'
+              }}
             >
               <Icon name="mail" />
             </button>
@@ -53,12 +63,16 @@ function Footer() {
           </span>
 
           <ul className={styles.footerList}>
-            <li>Início</li>
-            <li>Produtos</li>
-            <li>Metodologia</li>
-            <li>Quem somos</li>
-            <li>Recursos</li>
-            <li>Contato</li>
+            {navigation.map((item) => (
+              <li key={item.id}>
+                <button
+                  type="button"
+                  onClick={() => navigateTo(item.id)}
+                >
+                  {item.label}
+                </button>
+              </li>
+            ))}
           </ul>
         </div>
 
@@ -68,9 +82,32 @@ function Footer() {
           </span>
 
           <ul className={styles.footerList}>
-            <li>NexoAgenda</li>
-            <li>NexoGestão</li>
-            <li>NexoAnalytics</li>
+            <li>
+              <button
+                type="button"
+                onClick={() => navigateTo('produtos')}
+              >
+                NexoAgenda
+              </button>
+            </li>
+
+            <li>
+              <button
+                type="button"
+                onClick={() => navigateTo('produtos')}
+              >
+                NexoGestão
+              </button>
+            </li>
+
+            <li>
+              <button
+                type="button"
+                onClick={() => navigateTo('produtos')}
+              >
+                NexoAnalytics
+              </button>
+            </li>
           </ul>
         </div>
 
@@ -86,9 +123,9 @@ function Footer() {
                 size={17}
               />
 
-              <span>
+              <a href="tel:+5511999999999">
                 (11) 99999-9999
-              </span>
+              </a>
             </li>
 
             <li>
@@ -97,9 +134,9 @@ function Footer() {
                 size={17}
               />
 
-              <span>
+              <a href="mailto:contato@nexoceo.com.br">
                 contato@nexoceo.com.br
-              </span>
+              </a>
             </li>
 
             <li>
@@ -118,8 +155,7 @@ function Footer() {
 
       <div className={`container ${styles.footerBottom}`}>
         <span>
-          © 2026 NexoCEO. Todos os direitos
-          reservados.
+          © 2026 NexoCEO. Todos os direitos reservados.
         </span>
 
         <div>
