@@ -27,10 +27,17 @@ function Footer() {
               type="button"
               className={`${styles.socialButton} ${styles.instagram}`}
               aria-label="Instagram"
+              onClick={() =>
+                window.open(
+                  "https://www.instagram.com/nexoceo",
+                  "_blank",
+                  "noopener,noreferrer"
+                )
+              }
             >
               <Icon name="instagram" />
             </button>
-
+            {/*
             <button
               type="button"
               className={`${styles.socialButton} ${styles.linkedin}`}
@@ -46,7 +53,7 @@ function Footer() {
             >
               <Icon name="whatsapp" />
             </button>
-
+            */}
             <button
               type="button"
               className={`${styles.socialButton} ${styles.email}`}
@@ -121,6 +128,7 @@ function Footer() {
           </span>
 
           <ul className={styles.footerContact}>
+            {/*
             <li>
               <Icon
                 name="phone"
@@ -131,6 +139,7 @@ function Footer() {
                 (11) 99999-9999
               </a>
             </li>
+            */}
 
             <li>
               <Icon
