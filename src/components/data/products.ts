@@ -11,9 +11,9 @@ export interface Product {
 export const products: Product[] = [
   {
     icon: 'calendar',
-    title: 'NexoAgenda',
+    title: 'NexoElo',
     description:
-      'Sistema completo de agendamento online para profissionais, empresas e seus clientes.',
+      'Sistema completo de agendamento online para autônomos, empresas e seus clientes.',
     items: [
       'Agenda inteligente',
       'Gestão de serviços e profissionais',
@@ -22,6 +22,7 @@ export const products: Product[] = [
     ],
     tone: 'blue',
   },
+  /*
   {
     icon: 'users',
     title: 'NexoGestão',
@@ -48,4 +49,6 @@ export const products: Product[] = [
     ],
     tone: 'violet',
   },
+  */
+  
 ]
