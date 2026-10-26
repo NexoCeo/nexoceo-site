@@ -6,7 +6,6 @@ import ContactSection from '@/components/sections/contact-section/ContactSection
 import HeroSection from '@/components/sections/hero-section/HeroSection'
 import MethodologySection from '@/components/sections/methodology-section/MethodologySection'
 import ProductsSection from '@/components/sections/products-section/ProductsSection'
-import SocialProofSection from '@/components/sections/social-proof-section/SocialProofSection'
 import WhyNexoSection from '@/components/sections/why-nexo-section/WhyNexoSection'
 
 function App() {
@@ -25,8 +24,6 @@ function App() {
       <MethodologySection />
 
       <WhyNexoSection />
-
-      <SocialProofSection />
 
       <ContactSection />
 
