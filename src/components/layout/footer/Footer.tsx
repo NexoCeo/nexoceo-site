@@ -54,17 +54,6 @@ function Footer() {
               <Icon name="whatsapp" />
             </button>
             */}
-            <button
-              type="button"
-              className={`${styles.socialButton} ${styles.email}`}
-              aria-label="E-mail"
-              onClick={() => {
-                window.location.href =
-                  'mailto:contato@nexoceo.com.br'
-              }}
-            >
-              <Icon name="mail" />
-            </button>
           </div>
         </div>
 
@@ -94,31 +83,9 @@ function Footer() {
 
           <ul className={styles.footerList}>
             <li>
-              <button
-                type="button"
-                onClick={() => navigateTo('produtos')}
-              >
-                NexoAgenda
-              </button>
+              <a href="/nexoelo">NexoElo</a>
             </li>
 
-            <li>
-              <button
-                type="button"
-                onClick={() => navigateTo('produtos')}
-              >
-                NexoGestão
-              </button>
-            </li>
-
-            <li>
-              <button
-                type="button"
-                onClick={() => navigateTo('produtos')}
-              >
-                NexoAnalytics
-              </button>
-            </li>
           </ul>
         </div>
 
