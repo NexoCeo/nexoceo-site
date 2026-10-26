@@ -23,14 +23,14 @@ function BrandMark({
       <img
         className={styles.brandSymbol}
         src={logo}
-        alt="NexoCEO"
+        alt="NexoCeo"
         style={{
           borderColor: theme.colors.primary,
         }}
       />
 
       <div className={styles.brandCopy}>
-        <strong>NexoCEO</strong>
+        <strong>NexoCeo</strong>
 
         {!compact && (
           <small>
