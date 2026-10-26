@@ -1,4 +1,5 @@
 import Footer from '@/components/layout/footer/Footer'
+import NexoEloPage from '@/pages/NexoEloPage'
 
 import BrandSection from '@/components/sections/brand-section/BrandSection'
 import ContactSection from '@/components/sections/contact-section/ContactSection'
@@ -9,6 +10,10 @@ import SocialProofSection from '@/components/sections/social-proof-section/Socia
 import WhyNexoSection from '@/components/sections/why-nexo-section/WhyNexoSection'
 
 function App() {
+  if (window.location.pathname.replace(/\/$/, '') === '/nexoelo') {
+    return <NexoEloPage />
+  }
+
   return (
     <main>
       <HeroSection />
