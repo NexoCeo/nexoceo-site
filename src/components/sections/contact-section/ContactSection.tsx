@@ -2,8 +2,8 @@ import styles from './styles.module.css'
 import Icon from '@/components/common/Icon'
 
 function ContactSection() {
-  const openEmail = () => {
-    window.location.href = 'mailto:contato@nexoceo.com.br'
+  const openWhatsApp = () => {
+    window.location.href = 'https://wa.me/5527997333212?text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20um%20especialista%20da%20NexoCeo.'
   }
 
   return (
@@ -27,7 +27,7 @@ function ContactSection() {
         <button
           type="button"
           className={styles.ctaBarButton}
-          onClick={openEmail}
+          onClick={openWhatsApp}
         >
           Fale com um especialista
 
