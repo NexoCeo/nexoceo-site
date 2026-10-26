@@ -49,7 +49,7 @@ function Header() {
       <button
         type="button"
         className={styles.headerCta}
-        onClick={() => navigateTo('contato')}
+        onClick={() => { window.location.href = 'https://wa.me/5527997333212?text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20um%20especialista%20da%20NexoCeo.' }}
       >
         Fale com um especialista
       </button>
