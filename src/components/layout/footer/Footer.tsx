@@ -135,7 +135,7 @@ function Footer() {
 
       <div className={`container ${styles.footerBottom}`}>
         <span>
-          © 2026 NexoCEO. Todos os direitos reservados.
+          © 2026 NexoCeo. Todos os direitos reservados.
         </span>
 
         <div>
