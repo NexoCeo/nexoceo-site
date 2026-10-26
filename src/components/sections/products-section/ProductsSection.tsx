@@ -2,6 +2,7 @@ import styles from './styles.module.css'
 
 import Icon from '@/components/common/Icon'
 import { products } from '@/components/data/products'
+import nexoEloLogo from '@/images/logo-nexoElo.png'
 
 function ProductsSection() {
   return (
@@ -40,13 +41,21 @@ function ProductsSection() {
             >
               <span
                 className={`${styles.productIcon} ${
-                  styles[product.tone]
+                  product.title === 'NexoElo' ? styles.productLogoWrapper : styles[product.tone]
                 }`}
               >
-                <Icon
-                  name={product.icon}
-                  size={28}
-                />
+                {product.title === 'NexoElo' ? (
+                  <img
+                    src={nexoEloLogo}
+                    alt="Logo NexoElo"
+                    className={styles.productLogo}
+                  />
+                ) : (
+                  <Icon
+                    name={product.icon}
+                    size={28}
+                  />
+                )}
               </span>
 
               <h3>{product.title}</h3>
