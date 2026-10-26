@@ -77,14 +77,14 @@ function ProductsSection() {
                 ))}
               </ul>
 
-              <button type="button">
+              <a className={styles.learnMore} href={product.title === 'NexoElo' ? '/nexoelo' : '#contato'}>
                 Saiba mais
 
                 <Icon
                   name="arrow"
                   size={16}
                 />
-              </button>
+              </a>
             </article>
           ))}
         </div>
