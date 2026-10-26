@@ -35,7 +35,7 @@ function HeroSection() {
           </h1>
 
           <p>
-            A NexoCEO oferece soluções
+            A NexoCeo oferece soluções
             inteligentes para gestão de
             atendimentos e processos,
             ajudando empresas e
@@ -91,7 +91,7 @@ function HeroSection() {
                 <Icon name="calendar" />
               </span>
 
-              <b>NexoCEO</b>
+              <b>NexoCeo</b>
 
               <small>
                 Automação que
@@ -119,7 +119,7 @@ function HeroSection() {
         <div className={styles.heroVisual}>
           <img
             src={heroMockup}
-            alt="Plataforma NexoCEO em computador e smartphone"
+            alt="Plataforma NexoCeo em computador e smartphone"
             className={styles.heroMockup}
           />
         </div>
