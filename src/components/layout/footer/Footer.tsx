@@ -139,13 +139,9 @@ function Footer() {
         </span>
 
         <div>
-          <button type="button">
-            Política de Privacidade
-          </button>
+          <a href="/politica-de-privacidade">Política de Privacidade</a>
 
-          <button type="button">
-            Termos de Uso
-          </button>
+          <a href="/termos-de-uso">Termos de Uso</a>
         </div>
       </div>
     </footer>
