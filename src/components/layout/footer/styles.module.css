@@ -325,7 +325,8 @@
   gap: 38px;
 }
 
-.footerBottom button {
+.footerBottom button,
+.footerBottom a {
   padding: 0;
 
   border: 0;
@@ -333,6 +334,7 @@
   background: transparent;
 
   color: #98a6ae;
+  text-decoration: none;
 
   font-size: 8px;
 
@@ -342,7 +344,8 @@
     color .2s ease;
 }
 
-.footerBottom button:hover {
+.footerBottom button:hover,
+.footerBottom a:hover {
   color: #15d9c2;
 }
 
