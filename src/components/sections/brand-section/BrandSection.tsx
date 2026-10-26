@@ -17,7 +17,7 @@ function BrandSection() {
 
             <p>
               Três pontos conectados que representam
-              o elo entre cliente, NexoCEO e produtor.
+              o elo entre cliente, NexoCeo e produtor.
               Tecnologia que conecta, automatiza e
               impulsiona o crescimento do seu negócio.
             </p>
