@@ -14,6 +14,18 @@
   gap: 22px;
 }
 
+/* Centraliza o produto único sem mudar a largura padrão do card. */
+.productGrid:has(> .productCard:only-child) {
+  grid-template-columns: minmax(0, 1fr);
+  justify-items: center;
+}
+
+.productGrid > .productCard:only-child {
+  width: 100%;
+  max-width: calc((100% - 44px) / 3);
+}
+
+
 .productCard {
   border: 1px solid #e7edf2;
 
@@ -167,6 +179,10 @@
 
   .productCard {
     min-height: auto;
+  }
+
+  .productGrid > .productCard:only-child {
+    max-width: 500px;
   }
 }
 .productLogoWrapper {
