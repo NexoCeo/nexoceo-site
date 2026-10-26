@@ -198,7 +198,8 @@
   padding: 0;
 }
 
-.footerList button {
+.footerList button,
+.footerList a {
   margin: 0;
 
   padding: 0;
@@ -216,6 +217,7 @@
   line-height: 1.4;
 
   text-align: left;
+  text-decoration: none;
 
   cursor: pointer;
 
@@ -224,13 +226,15 @@
     transform .2s ease;
 }
 
-.footerList button:hover {
+.footerList button:hover,
+.footerList a:hover {
   color: #15d9c2;
 
   transform: translateX(3px);
 }
 
-.footerList button:focus-visible {
+.footerList button:focus-visible,
+.footerList a:focus-visible {
   color: #15d9c2;
 
   outline:
